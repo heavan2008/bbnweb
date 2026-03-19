@@ -17,16 +17,16 @@
             font-family: system-ui, sans-serif;
         }
 
-        /* 外框容器（淡绿色填充） */
-        .btn-wrapper {
-            padding: 16px 28px;
-            background: #888;
-            /* 整个填充为淡绿色 */
-            border-radius: 12px;
-            /* 可调圆角 */
+        .logo {
+            width: 100%;
+            margin: auto;
+        }
+
+        .container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            gap: 0px;
         }
 
         /* 圆形按钮 */
@@ -43,9 +43,9 @@
             transition: background 0.2s, transform 0.15s;
         }
 
-        .play-btn:hover {
+        /* .play-btn:hover {
             background: rgba(0, 0, 0, 0.35);
-        }
+        } */
 
         .play-btn:active {
             transform: scale(0.92);
@@ -60,22 +60,20 @@
 </head>
 
 <body>
-    <div>
-        <img src="logo.png">
-    </div>
-    <!-- 外框 + 按钮 -->
-    <!-- <div class="btn-wrapper"> -->
-    <div class="play-btn" id="playBtn">
-        <!-- 播放图标 -->
-        <svg id="iconPlay" viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z"></path>
-        </svg>
-
-        <!-- 暂停图标（初始隐藏） -->
-        <svg id="iconPause" viewBox="0 0 24 24" style="display:none;">
-            <path d="M6 5h4v14H6zm8 0h4v14h-4z"></path>
-        </svg>
-        <!-- </div> -->
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <div class="play-btn" id="playBtn">
+            <!-- 播放图标 -->
+            <svg id="iconPlay" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+            </svg>
+            <!-- 暂停图标（初始隐藏） -->
+            <svg id="iconPause" viewBox="0 0 24 24" style="display:none;">
+                <path d="M6 5h4v14H6zm8 0h4v14h-4z"></path>
+            </svg>
+        </div>
     </div>
 
     <!-- 音频流 -->
